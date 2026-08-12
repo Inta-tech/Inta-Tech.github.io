@@ -68,12 +68,12 @@ export function Hero() {
         <Reveal delay={200} className="justify-self-center">
           <div className="relative">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-primary/15 blur-3xl" />
-            <div className="float-slow relative overflow-hidden rounded-[2rem] border border-border bg-surface-2">
+            <div className="float-slow relative overflow-hidden rounded-[2rem] border border-border bg-gradient-to-b from-secondary/60 to-surface-2">
               <img
                 src={portrait}
                 alt="Portrait of Intasar Mostafiz"
-                width={448}
-                height={531}
+                width={1447}
+                height={1560}
                 className="h-auto w-[280px] object-cover sm:w-[340px]"
               />
             </div>
