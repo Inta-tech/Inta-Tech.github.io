@@ -21,7 +21,10 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio of Intasar Mostafiz, Computer Science & Engineering student at BUP — Java, Python and React projects spanning AI, algorithms and robotics.",
       },
-      { property: "og:title", content: "Intasar Mostafiz — CSE Student & Developer Portfolio" },
+      {
+        property: "og:title",
+        content: "Intasar Mostafiz — CSE Student & Developer Portfolio",
+      },
       {
         property: "og:description",
         content:
@@ -40,54 +43,76 @@ function Portfolio() {
       <SiteNav />
       <Hero />
 
+      {/* About */}
       <Section id="about">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionHeading eyebrow="About" title="Curious by default, methodical by habit." />
+          <SectionHeading
+            eyebrow="About"
+            title="Curious by default, methodical by habit."
+          />
+
           <Reveal delay={100} className="space-y-5 text-muted-foreground">
             <p>
-              I'm Intasar Mostafiz, a Computer Science &amp; Engineering undergraduate at
-              Bangladesh University of Professionals, currently maintaining a CGPA of 3.85 out of
-              4.00. I enjoy turning abstract ideas into working software — whether that's
-              Dijkstra's algorithm powering a Dhaka City navigation system, a Turing machine
-              simulator making automata theory click, or an NLP pipeline detecting fake news.
+              I'm Intasar Mostafiz, a Computer Science &amp; Engineering
+              undergraduate at Bangladesh University of Professionals,
+              currently maintaining a CGPA of 3.85 out of 4.00. I enjoy
+              turning abstract ideas into working software — whether that's
+              Dijkstra's algorithm powering a Dhaka City navigation system, a
+              Turing machine simulator making automata theory click, or an NLP
+              pipeline detecting fake news.
             </p>
+
             <p>
-              My toolkit spans C, C++, Java, Python and JavaScript, with hands-on experience in
-              React.js, Node.js, MySQL and Java Swing. I'm equally comfortable competing in
-              inter-university programming contests, building robots with the BUP Robotics Club,
-              and shipping full-stack projects from scratch.
+              My toolkit spans C, C++, Java, Python and JavaScript, with
+              hands-on experience in React.js, Node.js, MySQL and Java Swing.
+              I'm equally comfortable competing in inter-university
+              programming contests, building robots with the BUP Robotics
+              Club, and shipping full-stack projects from scratch.
             </p>
+
             <p>
-              Right now, I'm focused on growing as a software engineer through real-world
-              internships and collaborative projects. I learn fast, write clean code, and care about
-              building things that actually work.
+              Right now, I'm focused on growing as a software engineer through
+              real-world internships and collaborative projects. I learn fast,
+              write clean code, and care about building things that actually
+              work.
             </p>
+
             <ul className="grid gap-3 pt-2 font-mono text-sm">
               <li className="flex gap-3">
-                <span className="text-primary">01</span> Based in Dhaka, Bangladesh
+                <span className="text-primary">01</span>
+                Based in Dhaka, Bangladesh
               </li>
+
               <li className="flex gap-3">
-                <span className="text-primary">02</span> Graduating December 2027
+                <span className="text-primary">02</span>
+                Graduating December 2027
               </li>
+
               <li className="flex gap-3">
-                <span className="text-primary">03</span> Open to software engineering internships
+                <span className="text-primary">03</span>
+                Open to software engineering internships
               </li>
             </ul>
           </Reveal>
         </div>
       </Section>
 
+      {/* Skills */}
       <Section id="skills">
         <SectionHeading
           eyebrow="Skills"
           title="Technical toolkit"
           description="Languages, frameworks and platforms I use to design, build and ship."
         />
+
         <div className="grid gap-6 md:grid-cols-3">
           {skillGroups.map((group, i) => (
             <Reveal key={group.title} delay={i * 90}>
               <div className="card-lift h-full rounded-2xl border border-border bg-card p-7">
-                <h3 className="font-display text-lg font-semibold">{group.title}</h3>
+                <h3 className="font-display text-lg font-semibold">
+                  {group.title}
+                </h3>
+
                 <div className="mt-5 flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <span
@@ -104,30 +129,40 @@ function Portfolio() {
         </div>
       </Section>
 
+      {/* Projects */}
       <Section id="projects">
         <SectionHeading
           eyebrow="Projects"
           title="Things I've built"
           description="Seven projects across desktop applications, algorithms, embedded systems and machine learning."
         />
+
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={(i % 2) * 80}>
               <article className="card-lift group flex h-full flex-col rounded-2xl border border-border bg-card p-7">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
-                  <h3 className="font-display text-xl font-semibold">{project.title}</h3>
+                  <h3 className="font-display text-xl font-semibold">
+                    {project.title}
+                  </h3>
+
                   {project.status ? (
                     <span className="shrink-0 rounded-full bg-accent/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
                       {project.status}
                     </span>
                   ) : null}
                 </div>
+
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {project.description}
                 </p>
+
                 <div className="mt-6 flex flex-wrap gap-2 border-t border-border/70 pt-5">
                   {project.stack.map((tech) => (
-                    <span key={tech} className="font-mono text-xs text-primary">
+                    <span
+                      key={tech}
+                      className="font-mono text-xs text-primary"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -138,73 +173,222 @@ function Portfolio() {
         </div>
       </Section>
 
+      {/* Education */}
       <Section id="education">
         <SectionHeading eyebrow="Education" title="Academic background" />
+
         <div className="relative border-l border-border pl-8">
           {education.map((item, i) => (
             <Reveal key={item.degree} delay={i * 90}>
               <div className="relative pb-12 last:pb-0">
                 <span className="absolute -left-[2.28rem] top-2 h-3 w-3 rounded-full border-2 border-primary bg-background" />
+
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
                   {item.period}
                 </p>
-                <h3 className="mt-3 font-display text-xl font-semibold">{item.degree}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{item.org}</p>
-                <p className="mt-2 text-sm text-foreground/80">{item.detail}</p>
+
+                <h3 className="mt-3 font-display text-xl font-semibold">
+                  {item.degree}
+                </h3>
+
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {item.org}
+                </p>
+
+                <p className="mt-2 text-sm text-foreground/80">
+                  {item.detail}
+                </p>
               </div>
             </Reveal>
           ))}
         </div>
       </Section>
 
+      {/* CV / Resume */}
+      <Section id="cv">
+        <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Resume"
+              title="My Curriculum Vitae"
+              description="Explore my academic background, technical skills, projects, achievements and experience in detail."
+            />
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              {/* View CV */}
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-primary-foreground transition-all hover:scale-105 hover:opacity-90"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                View CV
+              </a>
+
+              {/* Download CV */}
+              <a
+                href="/cv.pdf"
+                download="Intasar-Mostafiz-CV.pdf"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-foreground transition-all hover:scale-105 hover:border-primary hover:text-primary"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3v12" />
+                  <path d="m7 10 5 5 5-5" />
+                  <path d="M5 21h14" />
+                </svg>
+                Download CV
+              </a>
+            </div>
+          </Reveal>
+
+          {/* CV Card */}
+          <Reveal delay={120}>
+            <div className="card-lift rounded-2xl border border-border bg-card p-8">
+              <div className="flex items-center gap-5">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                    <path d="M14 2v6h6" />
+                    <path d="M8 13h8" />
+                    <path d="M8 17h6" />
+                  </svg>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-xl font-semibold">
+                    Intasar Mostafiz
+                  </h3>
+
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    CSE Student &amp; Software Developer
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-7 border-t border-border pt-6">
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
+                  Resume
+                </p>
+
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  My CV contains a detailed overview of my education, technical
+                  skills, projects, achievements and professional interests.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* Achievements */}
       <Section id="achievements">
         <SectionHeading
           eyebrow="Achievements"
           title="Competitions, certifications & leadership"
         />
+
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-4">
             {achievements.map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
                 <div className="card-lift rounded-2xl border border-border bg-card p-6">
                   <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
-                    <h3 className="font-display text-base font-semibold">{item.title}</h3>
+                    <h3 className="font-display text-base font-semibold">
+                      {item.title}
+                    </h3>
+
                     <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                       {item.period}
                     </span>
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground">{item.detail}</p>
+
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    {item.detail}
+                  </p>
                 </div>
               </Reveal>
             ))}
           </div>
+
           <div>
             <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
               Co-curricular
             </h3>
+
             <div className="mt-6 space-y-4">
               {activities.map((item, i) => (
                 <Reveal key={item.title} delay={i * 60}>
                   <div className="card-lift rounded-2xl border border-border bg-surface p-6">
-                    <h4 className="font-display text-base font-semibold">{item.title}</h4>
+                    <h4 className="font-display text-base font-semibold">
+                      {item.title}
+                    </h4>
+
                     <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                       {item.period}
                     </p>
-                    <p className="mt-3 text-sm text-muted-foreground">{item.detail}</p>
+
+                    <p className="mt-3 text-sm text-muted-foreground">
+                      {item.detail}
+                    </p>
                   </div>
                 </Reveal>
               ))}
             </div>
+
             <h3 className="mt-12 font-mono text-xs uppercase tracking-[0.3em] text-primary">
               References
             </h3>
+
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {references.map((ref) => (
                 <Reveal key={ref.email}>
                   <div className="rounded-2xl border border-border p-5">
-                    <p className="font-display text-sm font-semibold">{ref.name}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{ref.title}</p>
-                    <p className="text-xs text-muted-foreground">{ref.org}</p>
+                    <p className="font-display text-sm font-semibold">
+                      {ref.name}
+                    </p>
+
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {ref.title}
+                    </p>
+
+                    <p className="text-xs text-muted-foreground">
+                      {ref.org}
+                    </p>
+
                     <a
                       href={`mailto:${ref.email}`}
                       className="mt-3 inline-block break-all font-mono text-xs text-primary hover:underline"
@@ -219,25 +403,45 @@ function Portfolio() {
         </div>
       </Section>
 
+      {/* Contact */}
       <Section id="contact" className="hero-aura">
         <Reveal>
           <h2 className="max-w-3xl font-display text-4xl font-bold sm:text-5xl">
-            Let's build something <span className="text-gradient">worth shipping.</span>
+            Let's build something{" "}
+            <span className="text-gradient">worth shipping.</span>
           </h2>
         </Reveal>
+
         <Reveal delay={100}>
           <p className="mt-5 max-w-xl text-muted-foreground">
-            Available for software engineering internships and collaborative projects. The fastest
-            way to reach me is email.
+            Available for software engineering internships and collaborative
+            projects. The fastest way to reach me is email.
           </p>
         </Reveal>
+
         <Reveal delay={180}>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: "Email", value: profile.email, href: `mailto:${profile.email}` },
-              { label: "Phone", value: profile.phone, href: `tel:${profile.phone.replace(/\s/g, "")}` },
-              { label: "LinkedIn", value: "intasar-mostafiz", href: profile.linkedin },
-              { label: "GitHub", value: "Inta-tech", href: profile.github },
+              {
+                label: "Email",
+                value: profile.email,
+                href: `mailto:${profile.email}`,
+              },
+              {
+                label: "Phone",
+                value: profile.phone,
+                href: `tel:${profile.phone.replace(/\s/g, "")}`,
+              },
+              {
+                label: "LinkedIn",
+                value: "intasar-mostafiz",
+                href: profile.linkedin,
+              },
+              {
+                label: "GitHub",
+                value: "Inta-tech",
+                href: profile.github,
+              },
             ].map((item) => (
               <a
                 key={item.label}
@@ -249,21 +453,29 @@ function Portfolio() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
                   {item.label}
                 </p>
-                <p className="mt-3 break-words text-sm font-medium text-foreground">{item.value}</p>
+
+                <p className="mt-3 break-words text-sm font-medium text-foreground">
+                  {item.value}
+                </p>
               </a>
             ))}
           </div>
         </Reveal>
+
         <Reveal delay={240}>
-          <p className="mt-10 text-sm text-muted-foreground">{profile.location}</p>
+          <p className="mt-10 text-sm text-muted-foreground">
+            {profile.location}
+          </p>
         </Reveal>
       </Section>
 
+      {/* Footer */}
       <footer className="border-t border-border/60 py-10">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6">
           <p className="truncate font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
             © {new Date().getFullYear()} {profile.name}
           </p>
+
           <a
             href="#top"
             className="shrink-0 font-mono text-xs uppercase tracking-[0.2em] text-primary hover:underline"
