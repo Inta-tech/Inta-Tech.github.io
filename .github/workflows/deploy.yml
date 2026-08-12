@@ -33,6 +33,12 @@ jobs:
       - name: Build project
         run: bun run build
 
+      # Make sure the CV is included in the GitHub Pages output
+      - name: Copy CV to Pages output
+        run: |
+          cp public/cv.pdf .output/public/cv.pdf
+          ls -lh .output/public/cv.pdf
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -42,13 +48,13 @@ jobs:
           path: ./.output/public
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
 
     needs: build
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
