@@ -1,4 +1,4 @@
-import portrait from "@/assets/intasar-portrait.png.asset.json";
+import portrait from "@/assets/intasar-photo.jpg.asset.json";
 import { profile, stats, skillGroups } from "@/lib/portfolio-data";
 import { Reveal } from "./primitives";
 
