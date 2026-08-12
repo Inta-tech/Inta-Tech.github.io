@@ -19,11 +19,25 @@ export const stats = [
 ];
 
 export const skillGroups = [
-  { title: "Languages", items: ["C", "C++", "Java", "Python", "HTML"] },
-  { title: "Frameworks", items: ["React.js", "Node.js", "JavaScript", "CSS", "Java Swing"] },
+  {
+    title: "Languages",
+    items: ["C", "C++", "Java", "Python", "HTML"],
+  },
+  {
+    title: "Frameworks",
+    items: ["React.js", "Node.js", "JavaScript", "CSS", "Java Swing"],
+  },
   {
     title: "Tools & Platforms",
-    items: ["Git", "GitHub", "VS Code", "IntelliJ IDEA", "Code::Blocks", "Linux", "MySQL"],
+    items: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "IntelliJ IDEA",
+      "Code::Blocks",
+      "Linux",
+      "MySQL",
+    ],
   },
 ];
 
@@ -98,27 +112,32 @@ export const achievements = [
   {
     title: "Inter-University Programming Contest (IUPC)",
     period: "Oct 2024 – Present",
-    detail: "Competitive programming contests, solving algorithmic problems under time constraints.",
+    detail:
+      "Competitive programming contests, solving algorithmic problems under time constraints.",
   },
   {
     title: "Circuit Clash 1.0 Robo Soccer — Participant & Organizer",
     period: "Oct 2025",
-    detail: "Competed and helped organize the robotics event, handling coordination and technical activities.",
+    detail:
+      "Competed and helped organize the robotics event, handling coordination and technical activities.",
   },
   {
     title: "Overview of AI — Participant",
     period: "Feb 2025",
-    detail: "Hands-on exposure to fundamental artificial intelligence concepts and applications.",
+    detail:
+      "Hands-on exposure to fundamental artificial intelligence concepts and applications.",
   },
   {
     title: "Database Management & Excel Pivot Competition — BUP Career Club",
     period: "2025",
-    detail: "Demonstrated data analysis and problem-solving skills across database and pivot table tasks.",
+    detail:
+      "Demonstrated data analysis and problem-solving skills across database and pivot table tasks.",
   },
   {
     title: "Microsoft Excel Competition — Participant",
     period: "2024",
-    detail: "Proficiency in data analysis, spreadsheet management, and problem solving.",
+    detail:
+      "Proficiency in data analysis, spreadsheet management, and problem solving.",
   },
 ];
 
@@ -126,17 +145,20 @@ export const activities = [
   {
     title: "BUP Robotics Club — General Member",
     period: "Jan 2025 – Present",
-    detail: "Contributing to robotics activities and technical projects in robotics and automation.",
+    detail:
+      "Contributing to robotics activities and technical projects in robotics and automation.",
   },
   {
     title: "Notre Dame Information Technology Club — Executive Member",
     period: "Mar 2022 – Dec 2023",
-    detail: "Organized technology-focused events, activities, and club initiatives.",
+    detail:
+      "Organized technology-focused events, activities, and club initiatives.",
   },
   {
     title: "Bangladesh Scouts — Division Head",
     period: "2014 – 2021",
-    detail: "Led a scout division, developing leadership, teamwork, discipline, and organization.",
+    detail:
+      "Led a scout division, developing leadership, teamwork, discipline, and organization.",
   },
 ];
 
@@ -155,11 +177,17 @@ export const references = [
   },
 ];
 
+/*
+ * Navigation links
+ * CV has been added here so it automatically appears
+ * in both desktop and mobile navigation.
+ */
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#education", label: "Education" },
+  { href: "#cv", label: "CV" },
   { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
 ];
