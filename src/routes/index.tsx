@@ -45,15 +45,22 @@ function Portfolio() {
           <SectionHeading eyebrow="About" title="Curious by default, methodical by habit." />
           <Reveal delay={100} className="space-y-5 text-muted-foreground">
             <p>
-              I'm a Computer Science &amp; Engineering undergraduate at Bangladesh University of
-              Professionals, currently maintaining a CGPA of 3.85 out of 4.00. My work sits where
-              theory meets something you can actually run — Dijkstra's algorithm turned into a Dhaka
-              navigation tool, automata theory turned into a Turing machine simulator.
+              I'm Intasar Mostafiz, a Computer Science &amp; Engineering undergraduate at
+              Bangladesh University of Professionals, currently maintaining a CGPA of 3.85 out of
+              4.00. I enjoy turning abstract ideas into working software — whether that's
+              Dijkstra's algorithm powering a Dhaka City navigation system, a Turing machine
+              simulator making automata theory click, or an NLP pipeline detecting fake news.
             </p>
             <p>
-              Beyond coursework, I compete in inter-university programming contests, build robots
-              with the BUP Robotics Club, and I'm currently developing an AI system that assesses
-              the credibility of online news using NLP.
+              My toolkit spans C, C++, Java, Python and JavaScript, with hands-on experience in
+              React.js, Node.js, MySQL and Java Swing. I'm equally comfortable competing in
+              inter-university programming contests, building robots with the BUP Robotics Club,
+              and shipping full-stack projects from scratch.
+            </p>
+            <p>
+              Right now, I'm focused on growing as a software engineer through real-world
+              internships and collaborative projects. I learn fast, write clean code, and care about
+              building things that actually work.
             </p>
             <ul className="grid gap-3 pt-2 font-mono text-sm">
               <li className="flex gap-3">
@@ -63,7 +70,7 @@ function Portfolio() {
                 <span className="text-primary">02</span> Graduating December 2027
               </li>
               <li className="flex gap-3">
-                <span className="text-primary">03</span> Seeking software engineering internships
+                <span className="text-primary">03</span> Open to software engineering internships
               </li>
             </ul>
           </Reveal>
