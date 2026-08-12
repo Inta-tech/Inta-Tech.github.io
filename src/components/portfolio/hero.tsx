@@ -70,7 +70,7 @@ export function Hero() {
             <div className="absolute -inset-6 rounded-[2.5rem] bg-primary/15 blur-3xl" />
             <div className="float-slow relative overflow-hidden rounded-[2rem] border border-border bg-surface-2">
               <img
-                src={portrait.url}
+                src={portrait}
                 alt="Portrait of Intasar Mostafiz"
                 width={448}
                 height={531}
